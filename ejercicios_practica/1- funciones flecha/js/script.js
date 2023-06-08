@@ -24,17 +24,25 @@ boton.addEventListener("mouseout", function() {
 });
 
 console.log("Declaración de función una función común");
-function nombreCompleto(nombre, apellido) {
-    const completo = nombre + "_" + apellido;
-    return completo;
- }
+// function nombreCompleto(nombre, apellido) {
+//     const completo = nombre + "_" + apellido;
+//     return completo;
+//  }
+
+// Funcion anterior pasada a funcion flecha
+const nombreCompleto = (nombre, apellido) => nombre + "_" + apellido;
+
+
 
 console.log(nombreCompleto("Max", "Power"));
 
 console.log("Declaración de función anónima");
-const iniciales = function (nombre, apellido) {
-    return nombre[0].toUpperCase() + "_" + apellido[0].toUpperCase();
-}
+// const iniciales = function (nombre, apellido) {
+//     return nombre[0].toUpperCase() + "_" + apellido[0].toUpperCase();
+// }
+
+// Funcion anterior pasada a funcion flecha
+const iniciales = (nombre, apellido) => nombre[0].toUpperCase() + "_" + apellido[0].toUpperCase();
 
 console.log(iniciales("Jean", "Grey"));
 
@@ -49,3 +57,11 @@ sino que debe utilizarse como variable global.
 */
 
 const colores = ["azul", "verde", "amarillo", "rojo"];
+
+const mostrarValores = () => {
+    for (const element of colores) {
+        console.log(element);
+    }
+}
+
+mostrarValores();
