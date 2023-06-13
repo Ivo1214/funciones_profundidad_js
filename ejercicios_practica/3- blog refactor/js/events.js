@@ -9,23 +9,18 @@ const posts = document.getElementsByClassName("post");
 
 for (const post of posts) {
   post.classList.add("closed");
-  
-  const eventoMouseOver = () => {
+
+  post.addEventListener("mouseover", () => {
     // Removemos la clase de cerrado
     post.classList.remove("closed");
     // Agregamos la clase de abierto
     post.classList.add("open");
-  }
+  });
 
-  const eventoMouseOut = () => {
+  post.addEventListener("mouseout", () => {
     // Agregamos la clase de cerrado
     post.classList.add("closed");
     // Quitamos la clase de abierto
     post.classList.remove("open");
-  }
-
-
-  post.addEventListener("mouseover", eventoMouseOver);
-
-  post.addEventListener("mouseout", eventoMouseOut);
+  });
 }

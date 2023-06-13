@@ -15,11 +15,11 @@ Verifique que en consola no figura ningún error en alguna de ellas
 console.log("Declaración de eventos");
 const boton = document.querySelector("button");
 
-boton.addEventListener("click", function() {
+boton.addEventListener("click", () => {
     boton.className = "btnClick";
 });
 
-boton.addEventListener("mouseout", function() {
+boton.addEventListener("mouseout", () => {
     boton.className = "btnOut";
 });
 

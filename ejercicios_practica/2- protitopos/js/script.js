@@ -74,7 +74,8 @@ function post (titulo, avatar, texto) {
 
 let posts = [];
 for (const element of data) {
-  posts.push(element);
+  let instancia = new post(element.titulo, element.avatar, element.texto);
+  posts.push(instancia);
 }
 
 console.log(posts);
